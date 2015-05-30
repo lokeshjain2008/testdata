@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('shopsMela')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
+  .controller('MainCtrl', function () {
+    this.awesomeThings = [
       {
         'title': 'AngularJS',
         'url': 'https://angularjs.org/',
@@ -58,7 +58,7 @@ angular.module('shopsMela')
         'logo': 'ruby-sass.png'
       }
     ];
-    angular.forEach($scope.awesomeThings, function(awesomeThing) {
+    angular.forEach(this.awesomeThings, function(awesomeThing) {
       awesomeThing.rank = Math.random();
     });
   });
